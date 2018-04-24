@@ -2,34 +2,32 @@
   box-sizing: border-box;
 }
 div.carousel {
+  width: 100%;
+  display: block;
   text-align: center;
-  width: 80%;
-  min-height: 278px;
   margin: auto;
-  position: relative;
 }
 
 ul {
-  width: 100%;
+  display: block;
+  position: relative;
   padding: 0px;
+  margin: auto;
 }
 
 ul > li {
   list-style: none;
   position: absolute;
-  width: 100%;
 }
 
 .indicator {
   min-width: 100%;
   margin: auto;
   position: absolute;
-  bottom: 2rem;
+  bottom: 5%;
 }
 
 li.current > img {
-  width: auto;
-  max-height: 278px;
   opacity: 1;
   -webkit-transition: opacity 1.5s ease;
   -moz-transition: opacity 1.5s ease;
@@ -39,8 +37,7 @@ li.current > img {
 }
 
 li.hide > img {
-  width: auto;
-  max-height: 278px;
+  max-height: 400px;
   opacity: .3;
   visibility: hidden;
 }
@@ -60,7 +57,7 @@ li.hide > img {
 .prevBtn, .nextBtn {
   background-color: #003e63;
   border: solid 2px #001e30;
-  border-radius: 200px;
+  border-radius: 400px;
   display: block;
   height: 3.0rem;
   width: 3.0rem;

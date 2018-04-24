@@ -49,18 +49,28 @@ class Carousel extends Component {
   }
 
   render() {
-    const {currentIndex, arrayImg} = this.state
+    const {currentIndex, arrayImg} = this.state;
+    const { width } = this.props;
+    const ulStyle = {
+      maWidth: `${width}px`,
+      width: `${width}px`,
+      height: `${width*0.4}px`
+    };
+    const imgStyle = {
+      maxWidth: `${width}px`,
+      width: `${width}px`
+    };
     const img = arrayImg.map( (a,i) => {
-      return(<li key={i} className={currentIndex === i? "current":"hide"}><img src={a} alt="01"/></li>)
-    })
+      return(<li key={i} className={currentIndex === i? "current":"hide"}><img src={a} style={imgStyle} alt="01"/></li>)
+    });
     return (
       <div className="carousel">
-        <ul>
+        <ul style={ulStyle}>
           {img}
+          <span className="prevBtn" onClick={this.prevSlide}> <i className="left"></i> </span>
+          <span className="nextBtn" onClick={this.nextSlide}><i className="right"></i></span>
+          <Indicator carouselNum={arrayImg.length} dotAction={this.dotAction} currentIndex={this.state.currentIndex}/>
         </ul>
-        <span className="prevBtn" onClick={this.prevSlide}> <i className="left"></i> </span>
-        <span className="nextBtn" onClick={this.nextSlide}><i className="right"></i></span>
-        <Indicator carouselNum={arrayImg.length} dotAction={this.dotAction} currentIndex={this.state.currentIndex}/>
       </div>
     );
   }
