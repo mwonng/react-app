@@ -1,0 +1,925 @@
+/* /app/View/Themed/2015/Elements/Headers/standard/_init.desktop.scss */
+@import '_color';
+@import '_font';
+.eHeaderStandard {
+  $link-background-color:   $base-background-color-lightblue;
+  $search-background-color: $base-background-color-midpurple;
+  $search-font-size:        $base-font-size-heading-three;
+
+  position: relative;
+
+  & > div {
+      &:first-of-type {
+          background-color: $search-background-color;
+          min-height: 2px;
+
+          & > div {
+            //   @include outer-container;
+            //   @include content-wrapper;
+              position: relative;
+              display: none;
+              height: $search-font-size + 3.0rem;
+
+              & > form {
+                  & > ul {
+                      display: table;
+                      width: 100%;
+
+                      & > li {
+                          display: table-cell;
+                          white-space: nowrap;
+                          vertical-align: middle;
+
+                          & > input[type=search],
+                          & > span {
+                              display: block;
+                              float: left;
+                          }
+
+                          & > input[type=search] {
+                              -moz-appearance: none;
+                              -webkit-appearance: none;
+                              appearance: none;
+                              border: none;
+                              border-radius: 0;
+                              font: {
+                                  size:   $search-font-size;
+                                  weight: $base-font-weight-heading-sub;
+                              }
+                              height: $search-font-size + 1.0rem;
+                              margin: {
+                                  bottom: 1.0rem;
+                                  top:    1.0rem;
+                              }
+                              padding: {
+                                  bottom: 0;
+                                  left:   0.5rem;
+                                  right:  0;
+                                  top:    0;
+                              }
+                              outline: none;
+                          }
+
+                          & > span {
+                              line-height: $search-font-size + 3.0rem;
+                          }
+
+                          &:first-of-type,
+                          &:last-of-type {
+                              width: 1%;
+                          }
+
+                          &:first-of-type {
+                              color: $base-color-white;
+                              font: {
+                                  size:   $search-font-size;
+                                  weight: $base-font-weight-heading-sub;
+                              }
+                              padding-right: 1.0rem;
+                          }
+
+                          &:last-of-type {
+                              padding-left: 1.0rem;
+
+                              & > input[type=submit] {
+                                  -moz-appearance: none;
+                                  -webkit-appearance: none;
+                                  appearance: none;
+                                  border-radius: 0;
+                                  background-color: $base-background-color-darkpurple;
+                                  border: none;
+                                  color: $base-color-white;
+                                  font: {
+                                      size:   $base-font-size-heading-five;
+                                      weight: $base-font-weight-heading-sub;
+                                  }
+                                  height: $search-font-size + 1.0rem;
+                                  min-width: 140px;
+                                  outline: none;
+                                  padding: 0;
+                                  text-align: center;
+                              }
+                          }
+                      }
+                  }
+              }
+          }
+      }
+
+      &:last-of-type {
+          position: relative;
+
+          & > a {
+              height: 95px;
+              left: 50%;
+              margin-top: -47.5px;
+              margin-left: -480px;
+              position: absolute;
+              top: 50%;
+              width: 176px;
+              display: block;
+          }
+
+          & > div {
+              &:first-of-type {
+                  background-color: $base-background-color-lightgrey;
+                  border-bottom: solid 1px $base-border-color-midgrey;
+
+                  ul {
+                    //   @include content-wrapper;
+                    //   @include outer-container;
+
+                      & > li {
+                          float: right;
+
+                          &:first-of-type {
+                              & > span {
+                                  background: $base-color-midpurple;
+                                  border-radius: 3px;
+                                  color: $base-color-white;
+                                  cursor: pointer;
+                                  display: inline-block;
+                                  font: {
+                                      size:   $base-font-size-copy;
+                                      weight: $base-font-weight-copy-heavy;
+                                  }
+                                  padding: { // done by eye
+                                      bottom: 0.4rem;
+                                      left:   1.0rem;
+                                      right:  34px;
+                                      top:    0.35rem;
+                                  }
+                                  position: relative;
+                                  margin-top: 0.95rem; // done by eye
+
+                                  &:after {
+                                      background: {
+                                          image:    url(/img/2015/watermarks/menu/magnifyGlass_04.desktop.png);
+                                          position: top left;
+                                          repeat:   no-repeat;
+                                      }
+                                      content: '';
+                                      display: block;
+                                      height: 11px;
+                                      right: 1.0rem;
+                                      margin-top: -6px; // done by eye
+                                      position: absolute;
+                                      top: 50%;
+                                      width: 11px;
+                                  }
+
+                                  &.active {
+                                      &:after {
+                                          background-position: bottom left;
+                                      }
+                                  }
+                              }
+                          }
+
+                          &:not(:first-of-type):not(:last-of-type) {
+                              & > a {
+                                  display: block;
+                                  padding: {
+                                      bottom: 1.4rem; // done by eye
+                                      left:   2.0rem;
+                                      right:  1.0rem;
+                                      top:    1.6rem; // done by eye
+                                  }
+                                  position: relative;
+                                  color: $base-color-lightgrey;
+                                  font: {
+                                      size:   $base-font-size-copy-note;
+                                      weight: $base-font-weight-copy-heavy;
+                                  }
+                                  line-height: 1.0rem;
+
+                                  &:hover {
+                                      color: $base-color-darkblue;
+                                  }
+
+                                  &.howItWorks:before,
+                                  &.helpCentre:before {
+                                      background: {
+                                          repeat:   no-repeat;
+                                          position: top left;
+                                      }
+                                      content: '';
+                                      display: block;
+                                      height: 20px;
+                                      left: 1.0rem;
+                                      position: absolute;
+                                      top: 50%;
+                                      width: 31px;
+                                  }
+
+                                  &.howItWorks:before {
+                                      background-image: url(/img/2015/watermarks/menu/howItWorks_02.desktop.png);
+                                      margin: {
+                                          left: -10px;
+                                          top:  -10px;
+                                      }
+                                  }
+
+                                  &.helpCentre:before {
+                                      background-image: url(/img/2015/watermarks/menu/helpCentre_02.desktop.png);
+                                      margin: {
+                                          left: -6px;
+                                          top:  -10px;
+                                      }
+                                  }
+                              }
+                          }
+                          &:last-of-type {
+                              & > a {
+                                //   @include outer-container;
+                                  bottom: 0;
+                                  display: block;
+                                  height: 49px;
+                                  left: 1.0rem;
+                                  padding-top: 0.3rem; // done by eye
+                                  position: absolute;
+                                  top: 0;
+                                  width: 245px;
+                              }
+                          }
+                      }
+                  }
+              }
+
+              &:last-of-type {
+                  background-color: $base-background-color-white;
+                  position: relative;
+
+                  & > div {
+                    //   @include content-wrapper;
+                    //   @include outer-container;
+
+                      & > table {
+                          border-collapse: collapse;
+                          width: 100%;
+
+                          & > tbody > tr {
+                              height: 100%;
+
+                              & > td {
+                                //   @include outer-container;
+                                  border: {
+                                      bottom: none;
+                                      left:   none;
+                                      right:  1px solid $base-border-color-midgrey;
+                                      top:    none;
+                                  }
+                                  box-sizing: border-box;
+                                  height: 100%;
+                                  padding: 0;
+                                  position: relative;
+
+                                  &:first-of-type {
+                                      border-left: 1px solid $base-border-color-midgrey;
+                                  }
+                                  &:last-of-type {
+                                      & > div {
+                                          right: 0;
+                                          left: auto;
+                                          padding-right: 0;
+                                      }
+                                  }
+                                  & > p,
+                                  & > a {
+                                      $icon-padding: 10px;
+                                      display: block;
+                                      padding: {
+                                          bottom: 0.9rem;
+                                          left:   $icon-padding;
+                                          right:  $icon-padding;
+                                          top:    1.1rem;
+                                      }
+                                      position: relative;
+                                      text-align: center;
+                                      width: 100%;
+
+                                      & > span {
+                                          color: $base-color-darkblue;
+                                          display: inline-block;
+                                          font: {
+                                              size:   $base-font-size-copy-note;
+                                              weight: $base-font-weight-heading-sub;
+                                          }
+                                          line-height: 1.1rem;
+                                          padding-left: 2.0rem;
+                                          position: relative;
+                                          text-align: left;
+                                      }
+                                      &.computers > span:before,
+                                      &.entertainment > span:before,
+                                      &.furniture > span:before,
+                                      &.homeGarden > span:before,
+                                      &.kitchenLaundry > span:before,
+                                      &.featured > span:before,
+                                      &.baby > span:before,
+                                      &.phones > span:before {
+                                          background: {
+                                              position: top left;
+                                              repeat:   no-repeat;
+                                          }
+                                          content: '';
+                                          display: block;
+                                          left: 0;
+                                          top: 50%;
+                                          position: absolute;
+                                      }
+                                      &.baby {
+                                          $width: 48px * 0.5;
+                                          $height: 98px * 0.5;
+                                          & > span {
+                                              padding-left: $width + $icon-padding;
+
+                                              &:before {
+                                                  background: {
+                                                      image: url(/img/2015/watermarks/menu/baby_01.desktop.png);
+                                                      size:  $width $height;
+                                                  }
+                                                  height: $height * 0.5;
+                                                  margin-top: ($height * 0.25) * -1.0;
+                                                  width: $width;
+                                              }
+                                          }
+                                      }
+                                      &.computers {
+                                          $width: 30px;
+                                          & > span {
+                                              padding-left: $width + $icon-padding;
+
+                                              &:before {
+                                                  background: {
+                                                      image: url(/img/2015/watermarks/menu/computers_05.desktop.png);
+                                                      size:  $width 38px;
+                                                  }
+                                                  height: 19px;
+                                                  margin-top: -9px;
+                                                  width: $width;
+                                              }
+                                          }
+                                      }
+                                      &.entertainment {
+                                          $width: 31px;
+                                          & > span {
+                                              padding-left: $width + $icon-padding;
+
+                                              &:before {
+                                                  background: {
+                                                      image: url(/img/2015/watermarks/menu/entertainment_05.desktop.png);
+                                                      size:  $width 33px;
+                                                  }
+                                                  height: 17px;
+                                                  margin-top: -8px;
+                                                  width: $width;
+                                              }
+                                          }
+                                      }
+                                      &.furniture {
+                                          $width: 30px;
+                                          & > span {
+                                              padding-left: $width + $icon-padding;
+
+                                              &:before {
+                                                  background: {
+                                                      image: url(/img/2015/watermarks/menu/furniture_02.desktop.png);
+                                                      size:  $width 36px;
+                                                  }
+                                                  height: 18px;
+                                                  margin-top: -9px;
+                                                  width: $width;
+                                              }
+                                          }
+                                      }
+                                      &.homeGarden {
+                                          $width: 19px;
+                                          & > span {
+                                              padding-left: $width + $icon-padding;
+
+                                              &:before {
+                                                  background: {
+                                                      image: url(/img/2015/watermarks/menu/bbqs_02.desktop.png);
+                                                      size:  $width 55px;
+                                                  }
+                                                  height: 28px;
+                                                  margin-top: -15px; // bit extra to offset 'flames' at the top of the icon
+                                                  width: $width;
+                                              }
+                                          }
+                                      }
+                                      &.kitchenLaundry {
+                                          $width: 16px;
+                                          & > span {
+                                              padding-left: $width + $icon-padding;
+
+                                              &:before {
+                                                  background: {
+                                                      image: url(/img/2015/watermarks/menu/homeApps_04.desktop.png);
+                                                      size:  $width 39px;
+                                                  }
+                                                  height: 20px;
+                                                  margin-top: -10px;
+                                                  width: $width;
+                                              }
+                                          }
+                                      }
+                                      &.phones {
+                                          $width: 11px;
+                                          & > span {
+                                              padding-left: $width + $icon-padding;
+
+                                              &:before {
+                                                  background: {
+                                                      image: url(/img/2015/watermarks/menu/phones_03.desktop.png);
+                                                      size:  $width 42px;
+                                                  }
+                                                  height: 21px;
+                                                  margin-top: -10px;
+                                                  width: $width;
+                                              }
+                                          }
+                                      }
+                                      &.featured {
+                                          $height: 80px * 0.5;
+                                          $width: 43px * 0.5;
+                                          & > span {
+                                              padding-left: $width + $icon-padding;
+
+                                              &:before {
+                                                  background: {
+                                                      image: url(/img/2015/watermarks/menu/featured_03.desktop.png);
+                                                      size:  $width $height;
+                                                  }
+                                                  height: $height * 0.5;
+                                                  margin-top: ($height * 0.25) * -1.0;
+                                                  width: $width;
+                                              }
+                                          }
+                                      }
+                                  }
+                                  & > span {
+                                      background: $base-background-color-midpink;
+                                      display: block;
+                                      color: $base-color-white;
+                                      font: {
+                                          size:   $base-font-size-copy-note;
+                                          weight: $base-font-weight-copy-heavy;
+                                      }
+                                      padding: {
+                                          bottom: 0.15rem;
+                                          left:   0.3rem;
+                                          right:  0.3rem;
+                                          top:    0.15rem;
+                                      }
+                                      position: absolute;
+                                      right: -0.5rem;
+                                      top: -0.75rem;
+                                      z-index: 11;
+
+                                      &:after {
+                                          border: {
+                                              bottom: solid 0.25rem transparent;
+                                              left:   solid 0.25rem darken($base-background-color-midpink, 10%);
+                                              right:  solid 0.25rem transparent;
+                                              top:    solid 0.25rem darken($base-background-color-midpink, 10%);
+                                          }
+                                          content: '';
+                                          position: absolute;
+                                          right: 0;
+                                          top: 100%;
+                                      }
+                                  }
+                                  & > div {
+                                      display: none;
+                                      left: -2.0rem;
+                                      padding: {
+                                          bottom: 2.0rem;
+                                          left:   2.0rem;
+                                          right:  2.0rem;
+                                          top:    0;
+                                      }
+                                      position: absolute;
+                                      top: 69px; // Taken from rendering height of parent <tr> tag.
+                                      width: 304px; // 240px + 4.0rem;
+                                      z-index: 999;
+
+                                      & > ul {
+                                          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+
+                                          & > li {
+                                              position: relative;
+
+                                              & > span {
+                                                  background-color: $base-background-color-midpink;
+                                                  color: $base-color-white;
+                                                  cursor: pointer;
+                                                  display: block;
+                                                  font: {
+                                                      size:   $base-font-size-copy-note;
+                                                      weight: $base-font-weight-copy-heavy;
+                                                  }
+                                                  line-height: 1.0rem;
+                                                  padding: {
+                                                      bottom: 0.3rem;
+                                                      left:   0.5rem;
+                                                      right:  0.5rem;
+                                                      top:    0.3rem;
+                                                  }
+                                                  pointer-events: none;
+                                                  position: absolute;
+                                                  right: -0.5rem;
+                                                  top: -0.5rem;
+
+                                                  &:after {
+                                                      border: {
+                                                          bottom: 0.25rem solid transparent;
+                                                          left:   0.25rem solid darken($base-background-color-midpink, 10%);
+                                                          right:  0.25rem solid transparent;
+                                                          top:    0.25rem solid darken($base-background-color-midpink, 10%);
+                                                      }
+                                                      content: '';
+                                                      display: block;
+                                                      height: 0;
+                                                      position: absolute;
+                                                      right: 0;
+                                                      top: 100%;
+                                                      width: 0;
+                                                  }
+                                              }
+
+                                              &:first-of-type {
+                                                  &:before {
+                                                      content: '';
+                                                      background-color: lighten($base-background-color-darkblue, 10%);
+                                                      height: 3px;
+                                                      width: 100%;
+                                                      display: block;
+                                                  }
+                                              }
+
+                                              &:last-of-type > a {
+                                                  border-bottom: none;
+
+                                                  &:before {
+                                                      bottom: 0;
+                                                  }
+                                              }
+
+                                              & > a {
+                                                  background-color: $base-background-color-lightgrey;
+                                                  border-bottom: 1px solid $base-border-color-midgrey;
+                                                  color: $base-color-darkblue;
+                                                  cursor: pointer;
+                                                  display: block;
+                                                  font: {
+                                                      size: $base-font-size-heading-six;
+                                                      weight: $base-font-weight-heading-sub;
+                                                  }
+                                                  padding: {
+                                                      bottom: 1.0rem;
+                                                      left: 4.0rem;
+                                                      right: 1.0rem;
+                                                      top: 1.0rem;
+                                                  }
+                                                  position: relative;
+
+                                                  &:after {
+                                                      background: {
+                                                          repeat: no-repeat;
+                                                          position: top left;
+                                                      }
+                                                      content: '';
+                                                      display: block;
+                                                      left: 2.0rem;
+                                                      top: 50%;
+                                                      position: absolute;
+                                                  }
+                                                  &.bbqs:after {
+                                                      background-image: url(/img/2015/watermarks/menu/bbqs_01.mobile.png);
+                                                      height: 27px;
+                                                      margin: {
+                                                          left: -10px;
+                                                          top:  -15px; // bit extra to offset 'flames' at the top of the icon
+                                                      }
+                                                      width: 19px;
+                                                  }
+                                                  &.bedroom:after {
+                                                      $width: 61px;
+                                                      $height: 82px;
+                                                      background: {
+                                                          image: url(/img/2015/watermarks/menu/bedroom_02.mobile.png);
+                                                          size: ($width * 0.5) ($height * 0.5);
+                                                      }
+                                                      height: ($height * 0.25);
+                                                      margin: {
+                                                          left: (($width * 0.25) * -1);
+                                                          top:  (($height * 0.125) * -1);
+                                                      }
+                                                      width: ($width * 0.5);
+                                                  }
+                                                  &.cameras:after {
+                                                      background-image: url(/img/2015/watermarks/menu/cameras_01.mobile.png);
+                                                      height: 20px;
+                                                      margin: {
+                                                          left: -13px;
+                                                          top:  -10px;
+                                                      }
+                                                      width: 27px;
+                                                  }
+                                                  &.desktops:after {
+                                                      background-image: url(/img/2015/watermarks/menu/desktop_01.mobile.png);
+                                                      height: 21px;
+                                                      margin: {
+                                                          left: -15px;
+                                                          top:  -10px;
+                                                      }
+                                                      width: 31px;
+                                                  }
+                                                  &.dryers:after {
+                                                      background-image: url(/img/2015/watermarks/menu/dryer_01.mobile.png);
+                                                      height: 20px;
+                                                      margin: {
+                                                          left: -9px;
+                                                          top:  -10px;
+                                                      }
+                                                      width: 19px;
+                                                  }
+                                                  &.dining:after {
+                                                      $width: 68px;
+                                                      $height: 78px;
+                                                      background: {
+                                                          image: url(/img/2015/watermarks/menu/dining_02.mobile.png);
+                                                          size: ($width * 0.5) ($height * 0.5);
+                                                      }
+                                                      height: ($height * 0.25);
+                                                      margin: {
+                                                          left: (($width * 0.25) * -1);
+                                                          top:  (($height * 0.125) * -1);
+                                                      }
+                                                      width: ($width * 0.5);
+                                                  }
+                                                  &.dishwashers:after {
+                                                      background-image: url(/img/2015/watermarks/menu/dishwasher_01.mobile.png);
+                                                      height: 21px;
+                                                      margin: {
+                                                          left: -8px;
+                                                          top:  -10px;
+                                                      }
+                                                      width: 16px;
+                                                  }
+                                                  &.fitness:after {
+                                                      background-image: url(/img/2015/watermarks/menu/fitness_01.mobile.png);
+                                                      height: 25px;
+                                                      margin: {
+                                                          left: -14px;
+                                                          top:  -14px;
+                                                      }
+                                                      width: 25px;
+                                                  }
+                                                  &.floorCare:after {
+                                                      background-image: url(/img/2015/watermarks/menu/floorCare_01.mobile.png);
+                                                      height: 20px;
+                                                      margin: {
+                                                          left: -11px;
+                                                          top:  -10px;
+                                                      }
+                                                      width: 23px;
+                                                  }
+                                                  &.freezers:after {
+                                                      background-image: url(/img/2015/watermarks/menu/freezer_01.mobile.png);
+                                                      height: 18px;
+                                                      margin: {
+                                                          left: -12px;
+                                                          top:  -9px;
+                                                      }
+                                                      width: 24px;
+                                                  }
+                                                  &.fridges:after {
+                                                      background-image: url(/img/2015/watermarks/menu/fridge_01.mobile.png);
+                                                      height: 20px;
+                                                      margin: {
+                                                          left: -6px;
+                                                          top:  -10px;
+                                                      }
+                                                      width: 12px;
+                                                  }
+                                                  &.gaming {
+                                                      &:after {
+                                                          background-image: url(/img/2015/watermarks/menu/gaming_01.mobile.png);
+                                                          height: 20px;
+                                                          margin: {
+                                                              left: -13px;
+                                                              top:  -10px;
+                                                          }
+                                                          width: 27px;
+                                                      }
+                                                      &.alt:after {
+                                                          background: {
+                                                              image: url(/img/2015/watermarks/menu/gaming_02.mobile.png);
+                                                              size:  27px 40px;
+                                                          }
+                                                      }
+                                                  }
+                                                  &.garden:after {
+                                                      background-image: url(/img/2015/watermarks/menu/garden_01.mobile.png);
+                                                      height: 25px;
+                                                      margin: {
+                                                          left: -15px;
+                                                          top:  -14px;
+                                                      }
+                                                      width: 31px;
+                                                  }
+                                                  &.heatingCooling:after {
+                                                      background-image: url(/img/2015/watermarks/menu/heatingCooling_01.mobile.png);
+                                                      height: 20px;
+                                                      margin: {
+                                                          left: -10px;
+                                                          top:  -10px;
+                                                      }
+                                                      width: 20px;
+                                                  }
+                                                  &.laptops {
+                                                      &:after {
+                                                          background-image: url(/img/2015/watermarks/menu/laptops_01.mobile.png);
+                                                          height: 19px;
+                                                          margin: {
+                                                              left: -15px;
+                                                              top:  -9px;
+                                                          }
+                                                          width: 30px;
+                                                      }
+                                                      &.alt:after {
+                                                          background: {
+                                                              image: url(/img/2015/watermarks/menu/laptops_02.mobile.png);
+                                                              size: 30px 38px;
+                                                          }
+                                                      }
+                                                  }
+                                                  &.lounge:after {
+                                                      $width: 60px;
+                                                      $height: 72px;
+                                                      background: {
+                                                          image: url(/img/2015/watermarks/menu/lounge_01.mobile.png);
+                                                          size: ($width * 0.5) ($height * 0.5);
+                                                      }
+                                                      height: ($height * 0.25);
+                                                      margin: {
+                                                          left: (($width * 0.25) * -1);
+                                                          top:  (($height * 0.125) * -1);
+                                                      }
+                                                      width: ($width * 0.5);
+                                                  }
+                                                  &.office:after {
+                                                      $width: 63px;
+                                                      $height: 76px;
+                                                      background: {
+                                                          image: url(/img/2015/watermarks/menu/office_02.mobile.png);
+                                                          size: ($width * 0.5) ($height * 0.5);
+                                                      }
+                                                      height: ($height * 0.25);
+                                                      margin: {
+                                                          left: (($width * 0.25) * -1);
+                                                          top:  (($height * 0.125) * -1);
+                                                      }
+                                                      width: ($width * 0.5);
+                                                  }
+                                                  &.outdoor:after {
+                                                      $width: 51px;
+                                                      $height: 88px;
+                                                      background: {
+                                                          image: url(/img/2015/watermarks/menu/outdoor_01.mobile.png);
+                                                          size: ($width * 0.5) ($height * 0.5);
+                                                      }
+                                                      height: ($height * 0.25);
+                                                      margin: {
+                                                          left: (($width * 0.25) * -1);
+                                                          top:  (($height * 0.125) * -1);
+                                                      }
+                                                      width: ($width * 0.5);
+                                                  }
+                                                  &.stereos:after {
+                                                      background-image: url(/img/2015/watermarks/menu/stereos_01.mobile.png);
+                                                      height: 21px;
+                                                      margin: {
+                                                          left: -13px;
+                                                          top:  -10px;
+                                                      }
+                                                      width: 27px;
+                                                  }
+                                                  &.smallAppliances:after {
+                                                      background-image: url(/img/2015/watermarks/menu/smallAppliances_04.mobile.png);
+                                                      height: 20px;
+                                                      margin: {
+                                                          left: -7px;
+                                                          top:  -10px;
+                                                      }
+                                                      width: 14px;
+                                                  }
+                                                  &.tablets {
+                                                      &:after {
+                                                          background-image: url(/img/2015/watermarks/menu/tablet_01.mobile.png);
+                                                          height: 20px;
+                                                          margin: {
+                                                              left: -7px;
+                                                              top:  -10px;
+                                                          }
+                                                          width: 15px;
+                                                      }
+                                                      &.alt:after {
+                                                          background: {
+                                                              image: url(/img/2015/watermarks/menu/tablet_01.mobile.png);
+                                                              size:  15px 40px;
+                                                          }
+                                                      }
+                                                  }
+                                                  &.tvs {
+                                                      &:after {
+                                                          background-image: url(/img/2015/watermarks/menu/tvs_02.mobile.png);
+                                                          height: 20px;
+                                                          margin: {
+                                                              left: -11px;
+                                                              top:  -10px;
+                                                          }
+                                                          width: 23px;
+                                                      }
+                                                      &.alt:after {
+                                                          background: {
+                                                              image: url(/img/2015/watermarks/menu/tvs_03.mobile.png);
+                                                              size: 23px 40px;
+                                                          }
+                                                      }
+                                                  }
+                                                  &.washingMachines:after {
+                                                      background-image: url(/img/2015/watermarks/menu/washingMachine_01.mobile.png);
+                                                      height: 20px;
+                                                      margin: {
+                                                          left: -8px;
+                                                          top:  -10px;
+                                                      }
+                                                      width: 16px;
+                                                  }
+                                                  &:hover {
+                                                      background-color: $base-background-color-white;
+
+                                                      &:before {
+                                                          background-color: $base-color-lightblue;
+                                                          bottom: 0;
+                                                          content: '';
+                                                          display: block;
+                                                          position: absolute;
+                                                          right: 0;
+                                                          top: 0;
+                                                          width: 8px;
+                                                      }
+                                                  }
+                                              }
+                                          }
+                                      }
+                                  }
+                                  &.active {
+                                      background-color: $link-background-color;
+                                      border-right: 1px solid $link-background-color;
+                                      &:after {
+                                          background-color: $base-border-color-lightyellow;
+                                          height: 5px;
+                                          top: 0;
+                                          left: -1px;
+                                          right: -1px;
+                                          position: absolute;
+                                          display: block;
+                                          content: '';
+                                          z-index: 10;
+                                      }
+
+                                      & > p,
+                                      & > a {
+                                          & > span {
+                                              color: $base-color-white;
+                                          }
+                                          &.computers > span:before,
+                                          &.entertainment > span:before,
+                                          &.furniture > span:before,
+                                          &.homeApps > span:before,
+                                          &.homeGarden > span:before,
+                                          &.kitchenLaundry > span:before,
+                                          &.featured > span:before,
+                                          &.baby > span:before,
+                                          &.phones > span:before {
+                                              background-position: bottom left;
+                                          }
+                                      }
+                                      &:last-of-type {
+                                          border-left: 1px solid $link-background-color;
+                                      }
+                                  }
+                              }
+                          }
+                      }
+                  }
+              }
+          }
+      }
+  }
+}

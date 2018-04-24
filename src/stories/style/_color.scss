@@ -1,0 +1,128 @@
+/* /app/Sass/sass/application/_colors.scss */
+
+/* BASE BACKGROUND COLORS */
+$base-background-color-white:          #fff;
+$base-background-color-verylightgrey:  #f9f9f9;
+$base-background-color-lightgrey:      #f4f3f3;
+$base-background-color-midgrey:        #2c2c2c;
+$base-background-color-darkgrey:       #242424;
+$base-background-color-lightblue:      #2697ca;
+$base-background-color-midblue:        #0085c1;
+$base-background-color-midtodarkblue:  #00699e;
+$base-background-color-darkblue:       #004d7c;
+$base-background-color-verydarkblue:   #003e63;
+$base-background-color-midpurple:      #9a73b9;
+$base-background-color-darkpurple:     #6e448f;
+$base-background-color-verydarkpurple: #5d3080;
+$base-background-color-lightred:       #fa6b6f;
+$base-background-color-midred:         #f8575c;
+$base-background-color-darkred:        #e03339;
+$base-background-color-lightteal:      #75cbc8;
+$base-background-color-midteal:        #2197b4;
+$base-background-color-darkteal:       #1c8099;
+$base-background-color-lightyellow:    #fde083;
+$base-background-color-midyellow:      #f7c973;
+$base-background-color-darkyellow:     #dfb568;
+$base-background-color-midgreen:       #5DCF9E;
+$base-background-color-darkgreen:      #549d7c;
+$base-background-color-midpink:        #f16588;
+$base-background-color-inputerror:     #fdeded;
+
+/* FLASH MESSAGES */
+$base-background-color-flashalert:     #e9ae41;
+$base-background-color-flasherror:     #e3494e;
+$base-background-color-flashnotice:    $base-background-color-midblue;
+$base-background-color-flashsuccess:   $base-background-color-darkgreen;
+
+/* BASE BORDER COLORS */
+$base-border-color-white:             #fff;
+$base-border-color-lightgrey:         #f4f3f3;
+$base-border-color-midgrey:           #e2e2e2;
+$base-border-color-darkgrey:          #cfcfcf;
+$base-border-color-verydarkgrey:      #212121;
+$base-border-color-lightyellow:       #fbd24e;
+$base-border-color-midyellow:         #f7c973;
+$base-border-color-midblue:           #0085c1;
+$base-border-color-darkblue:          #004d7c;
+$base-border-color-midred:            #f8575c;
+
+/* Social Media */
+$base-border-color-twitter:           #00aced;
+$base-border-color-facebook:          #3B5998;
+$base-border-color-googlePlus:        #d6201f;
+
+/* Competitions */
+$base-background-color-competition:   #437be3;
+
+$base-widgetsHelpersMyformhelper-color:        grey;
+$base-widgetsHelpersMyformhelper-border-color: $base-border-color-darkgrey;
+$base-widgetsHelpersMyformhelper-error-color:  #ffd8d8;
+
+/* BASE COLORS */
+$base-color-white:                    #fff;
+$base-color-black:                    #000;
+$base-color-lightgrey:                #b0b0b0;
+$base-color-midgrey:                  #585656;
+$base-color-darkgrey:                 #454545;
+$base-color-lightblue:                #42BBEC;
+$base-color-midblue:                  #009FD2;
+$base-color-midtealblue:              #009fd2;
+$base-color-darkblue:                 #0080bf;
+$base-color-verydarkblue:             #3b70a6;
+$base-color-lightpink:                #f16588;
+$base-color-midpink:                  #e74d6c;
+$base-color-midred:                   #f74d53;
+$base-color-darkred:                  #e03339;
+$base-color-lightyellow:              #ffd381;
+$base-color-midyellow:                #f7c973;
+$base-color-midpurple:                #8f72b2;
+$base-color-lightteal:                #59cbc7;
+$base-color-midteal:                  #41aba7;
+$base-color-darkteal:                 #2e8b88;
+
+/* Button / Submit */
+$base-color-disabled: #c8c8c8;
+
+/* PROGRESS WIDGET */
+$base-background-color-infoWidgetDesktop: #427ae3;
+$base-background-color-infoWidgetMobile:  #e6f7fe;
+
+$base-border-color-infoWidgetMobile: #76baed;
+
+/* COLOR CLASSES */
+/* SET BACKGROUND COLOR */
+    .setBackgroundColorWhite {background-color: $base-background-color-white!important;}
+    .setBackgroundColorVeryLightGrey {background-color: $base-background-color-verylightgrey!important;}
+    .setBackgroundColorLightGrey {background-color: $base-background-color-lightgrey!important;}
+    .setBackgroundColorMidGrey {background-color: $base-background-color-midgrey!important;}
+    .setBackgroundColorDarkGrey {background-color: $base-background-color-darkgrey!important;}
+    .setBackgroundColorLightBlue {background-color: $base-background-color-lightblue!important;}
+    .setBackgroundColorMidBlue {background-color: $base-background-color-midblue!important;}
+    .setBackgroundColorMidToDarkBlue {background-color: $base-background-color-midtodarkblue!important;}
+    .setBackgroundColorDarkBlue {background-color: $base-background-color-darkblue!important;}
+    .setBackgroundColorVeryDarkBlue {background-color: $base-background-color-verydarkblue!important;}
+    .setBackgroundColorMidPurple {background-color: $base-background-color-midpurple!important;}
+    .setBackgroundColorDarkPurple {background-color: $base-background-color-darkpurple!important;}
+    .setBackgroundColorVeryDarkPurple {background-color: $base-background-color-verydarkpurple!important;}
+    .setBackgroundColorLightRed {background-color: $base-background-color-lightred!important;}
+    .setBackgroundColorMidRed {background-color: $base-background-color-midred!important;}
+    .setBackgroundColorMidTeal {background-color: $base-background-color-midteal!important;}
+    .setBackgroundColorDarkTeal {background-color: $base-background-color-darkteal!important;}
+    .setBackgroundColorLightYellow {background-color: $base-background-color-lightyellow!important;}
+    .setBackgroundColorMidYellow {background-color: $base-background-color-midyellow!important;}
+    .setBackgroundColorDarkYellow {background-color: $base-background-color-darkyellow!important;}
+
+/* SET COLOR */
+    .setColorWhite {color: $base-color-white!important;}
+    .setColorLightGrey {color: $base-color-lightgrey!important;}
+    .setColorMidGrey {color: $base-color-midgrey!important;}
+    .setColorDarkGrey {color: $base-color-darkgrey!important;}
+    .setColorLightBlue {color: $base-color-lightblue!important;}
+    .setColorMidBlue {color: $base-color-midblue!important;}
+    .setColorDarkBlue {color: $base-color-darkblue!important;}
+    .setColorMidPink {color: $base-color-midpink!important;}
+    .setColorMidTealBlue {color: $base-color-midtealblue!important;}
+    .setColorMidRed {color: $base-color-midred!important;}
+    .setColorLightYellow {color: $base-color-lightyellow!important;}
+    .setColorMidYellow {color: $base-color-midyellow!important;}
+    .setColorMidPurple {color: $base-color-midpurple!important;}
