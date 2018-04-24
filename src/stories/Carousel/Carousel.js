@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 import './Carousel.css';
+import Swipeable from 'react-swipeable'
 import banner01 from './img/banner-01.png';
 import banner02 from './img/banner-02.png';
 import banner03 from './img/banner-03.png';
 import banner04 from './img/banner-04.png';
 import Indicator from './Indicator';
-
+const RIGHT = '-1';
+const LEFT = '+1';
 class Carousel extends Component {
   constructor(props) {
     super(props)
@@ -15,13 +17,15 @@ class Carousel extends Component {
       length: arrayImg.length,
       arrayImg: arrayImg,
       autoplay: props.autoplay,
-      interval: props.interval
+      interval: props.interval,
+      imageIdx: 0
     }
   }
   componentDidMount() {
     if (this.state.autoplay === true) {
       this.interval = setInterval( () => this.nextSlide(), parseInt(this.state.interval,10));
     }
+    // document.getElementById('prevBtn').style.backgroundColor = "#ff0000";
   }
 
   componentWillUnmount() {
@@ -65,12 +69,20 @@ class Carousel extends Component {
     });
     return (
       <div className="carousel">
-        <ul style={ulStyle}>
-          {img}
-          <span className="prevBtn" onClick={this.prevSlide}> <i className="left"></i> </span>
-          <span className="nextBtn" onClick={this.nextSlide}><i className="right"></i></span>
-          <Indicator carouselNum={arrayImg.length} dotAction={this.dotAction} currentIndex={this.state.currentIndex}/>
-        </ul>
+        <Swipeable
+          trackMouse
+          style={{ touchAction: 'none' }}
+          preventDefaultTouchmoveEvent
+          onSwipedLeft={()=>this.nextSlide()}
+          onSwipedRight={()=>this.prevSlide()}
+        >
+          <ul style={ulStyle}>
+            {img}
+            <span className="prevBtn" id="prevBtn" onClick={this.prevSlide}> <i className="left"></i> </span>
+            <span className="nextBtn" onClick={this.nextSlide}><i className="right"></i></span>
+            <Indicator carouselNum={arrayImg.length} dotAction={this.dotAction} currentIndex={this.state.currentIndex}/>
+          </ul>
+        </Swipeable>
       </div>
     );
   }
