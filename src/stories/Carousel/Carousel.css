@@ -4,7 +4,7 @@
 div.carousel {
   text-align: center;
   width: 80%;
-  height: 278px;
+  min-height: 278px;
   margin: auto;
   position: relative;
 }
@@ -20,8 +20,16 @@ ul > li {
   width: 100%;
 }
 
+.indicator {
+  min-width: 100%;
+  margin: auto;
+  position: absolute;
+  bottom: 2rem;
+}
+
 li.current > img {
-  width:100%;
+  width: auto;
+  max-height: 278px;
   opacity: 1;
   -webkit-transition: opacity 1.5s ease;
   -moz-transition: opacity 1.5s ease;
@@ -31,7 +39,8 @@ li.current > img {
 }
 
 li.hide > img {
-  width:100%;
+  width: auto;
+  max-height: 278px;
   opacity: .3;
   visibility: hidden;
 }
@@ -102,13 +111,6 @@ span:hover i {
 .down {
   transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
-}
-
-.indicator {
-  width: 100%;
-  margin: auto;
-  position: absolute;
-  bottom: 2rem;
 }
 
 .dot {

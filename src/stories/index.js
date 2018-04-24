@@ -11,7 +11,7 @@ import Carousel from './Carousel/Carousel'
 
 storiesOf('Welcome', module).add('to Storybook', () => <Welcome showApp={linkTo('Button')} />);
 
-storiesOf('Carousel', module).add('Home Slider', () => <Carousel  autoplay={true} interval='2000' />);
+storiesOf('Carousel', module).add('Home Slider', () => <Carousel autoplay={true} interval='2000' />);
 
 
 storiesOf('Button', module)
