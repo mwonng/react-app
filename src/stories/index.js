@@ -8,6 +8,7 @@ import { Button, Welcome } from '@storybook/react/demo';
 import { RedButton } from './buttons/Button'
 import { Header } from './sections/header'
 import Carousel from './Carousel/Carousel'
+import Ribbon from './widgets/ribbon/ribbon'
 
 storiesOf('Welcome', module).add('to Storybook', () => <Welcome showApp={linkTo('Button')} />);
 
@@ -20,3 +21,6 @@ storiesOf('Button', module)
 
 storiesOf('Customize', module)
   .add('Red Button', () => <RedButton></RedButton>)
+
+  storiesOf('Widgets', module)
+  .add('Red Button', () => <Ribbon>This is Ribbon</Ribbon>)
