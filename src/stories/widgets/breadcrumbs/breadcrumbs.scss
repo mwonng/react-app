@@ -1,4 +1,3 @@
-$base: 38px;
 $current-bg-color: #49bcea;
 $border-color: rgba(0,0,0,0.2);
 $hover-bg-color: #1abc9c;
@@ -20,8 +19,10 @@ $green-darken 		  : #16a085;
 }
 .breadcrumbs {
   ul {
-    margin: 0px;
-    padding: 2rem;
+    text-align: center;
+    margin: 0px auto;
+    padding: 2rem 0rem;
+    width: 100%;
   }
 }
 #breadcrumb{
@@ -35,7 +36,8 @@ $green-darken 		  : #16a085;
   }
   
   li{
-    float:left;
+    // float:left;
+    display: inline-block;
     a{
       font-family: "proxima-nova";
       color: $normal-text-color;
@@ -45,7 +47,7 @@ $green-darken 		  : #16a085;
       position:relative;
       height: 40px;
       line-height:40px;
-      padding: 0 10px 0 5px;
+      padding: 0 8px 0 4px;
       text-align: center;
       margin-right: 23px;
     }
@@ -100,6 +102,7 @@ $green-darken 		  : #16a085;
     &:last-child{
       a{
         padding-right:15px;
+        margin-right: 0;
         @include border-radius(0 4px 4px 0);
         &:after{
           border:none;
