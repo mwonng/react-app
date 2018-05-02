@@ -1,5 +1,132 @@
-.breadcrumbs {
-    li {
-      position: relative;
+$base: 38px;
+$blue: #49bcea;
+$border-color: rgba(0,0,0,0.2);
+$hover-bg-color: #49bcea;
+$normal-bg-color: #f3f3f3;
+$normal-text-color: #969696;
+$blue-gray 			    : #34495e;
+$blue-gray-darken 	: #2c3e50;
+$blue-darken 		    : #2980b9;
+$green 				      : #1abc9c;
+$green-darken 		  : #16a085;
+
+@mixin border-radius($radius){
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+#breadcrumb{
+  list-style:none;
+  display: inline-block;
+  
+  .icon{
+    font-size: 14px;
+  }
+  
+  li{
+    float:left;
+    a{
+      font-family: "proxima-nova";
+      color: $normal-text-color;
+      display:block;
+      background: $normal-bg-color;
+      text-decoration: none;
+      position:relative;
+      height: 40px;
+      line-height:40px;
+      padding: 0 10px 0 5px;
+      text-align: center;
+      margin-right: 23px;
     }
+    &.completed {
+      a {
+        background-color: $blue-darken;
+        color: whitesmoke;
+        &:before{
+          border-color:$blue-darken;
+          border-left-color:transparent;
+         }
+        &:after{
+          border-left-color:$blue-darken;
+        }
+      }
+    }
+    // &:nth-child(even){
+    //   a{
+    //     background-color: $blue-darken;
+
+    //     &:before{
+    //       border-color:$blue-darken;
+    //       border-left-color:transparent;
+    //      }
+    //     &:after{
+    //       border-left-color:$blue-darken;
+    //     }
+    //   }
+    // }
+    &:first-child{
+      a{
+        padding-left:15px;
+        @include border-radius(4px 0 0 4px);
+        &:before{
+          border:none;
+         }
+      }
+    }
+    &:last-child{
+      a{
+        padding-right:15px;
+        @include border-radius(0 4px 4px 0);
+        &:after{
+          border:none;
+         }
+      }
+    }
+
+    a{   
+      &:before,
+      &:after{
+        content: "";
+        position:absolute;
+        top: 0;
+        border:0 solid $normal-bg-color;
+        border-width:20px 10px;
+        width: 0;
+        height: 0;
+      }
+      &:before{
+        left:-20px;
+        border-left-color:transparent;
+      }
+      &:after{
+        left:100%;
+        border-color:transparent;
+        border-left-color:$normal-bg-color;
+      }
+      &:hover{
+        background-color: $blue;
+        color: whitesmoke;
+        &:before{
+          border-color:$blue;
+          border-left-color:transparent;
+         }
+        &:after{
+          border-left-color:$blue;
+        }
+      }
+      &:active{
+        background-color: $green-darken;
+        
+        &:before{
+          border-color:$green-darken;
+          border-left-color:transparent;
+         }
+        &:after{
+          border-left-color:$green-darken;
+        }
+      }
+    }
+  }
 }

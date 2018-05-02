@@ -8,17 +8,21 @@ div.carousel {
   margin: auto;
 }
 
-ul {
-  display: block;
-  position: relative;
-  padding: 0px;
-  margin: auto;
+.carousel {
+  ul {
+    display: block;
+    position: relative;
+    padding: 0px;
+    margin: auto;
+
+    & > li {
+      list-style: none;
+      position: absolute;
+    }
+  }
 }
 
-ul > li {
-  list-style: none;
-  position: absolute;
-}
+
 
 .indicator {
   min-width: 100%;

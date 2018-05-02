@@ -10,6 +10,7 @@ import { Header } from './sections/header'
 import Carousel from './Carousel/Carousel'
 import Ribbon from './widgets/ribbon/ribbon'
 import Breadcrumbs from './widgets/breadcrumbs/breadcrumbs'
+import './fonts.scss'
 
 storiesOf('Welcome', module).add('to Storybook', () => <Welcome showApp={linkTo('Button')} />);
 

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './Carousel.css';
+import './Carousel.scss';
 import Swipeable from 'react-swipeable'
 import banner01 from './img/banner-01.png';
 import banner02 from './img/banner-02.png';
