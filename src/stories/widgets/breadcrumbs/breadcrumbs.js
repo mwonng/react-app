@@ -9,7 +9,7 @@ const Breadcrumb = () => {
         <li className="completed"><a href="#"><span class="icon icon-beaker"> </span> Projects</a></li>
         <li><a href="#"><span class="icon icon-double-angle-right"></span> Breadcrumb</a></li>
         <li><a href="#"><span class="icon icon-rocket"> </span> Getting started</a></li>
-        <li><a href="#"><span class="icon icon-arrow-down"> </span> Download</a></li>
+        <li className="current"><a href="#"><span class="icon icon-arrow-down"> </span> Download</a></li>
       </ul>
     </div>
   )

@@ -1,9 +1,11 @@
 $base: 38px;
-$blue: #49bcea;
+$current-bg-color: #49bcea;
 $border-color: rgba(0,0,0,0.2);
-$hover-bg-color: #49bcea;
-$normal-bg-color: #f3f3f3;
+$hover-bg-color: #1abc9c;
+$normal-bg-color: #dbdbdb;
 $normal-text-color: #969696;
+$completed-bg-color: #fff;
+$completed-text-color: #585858;
 $blue-gray 			    : #34495e;
 $blue-gray-darken 	: #2c3e50;
 $blue-darken 		    : #2980b9;
@@ -16,11 +18,18 @@ $green-darken 		  : #16a085;
       -ms-border-radius: $radius;
           border-radius: $radius;
 }
-
+.breadcrumbs {
+  ul {
+    margin: 0px;
+    padding: 2rem;
+  }
+}
 #breadcrumb{
   list-style:none;
   display: inline-block;
-  
+  background-color: gray;
+
+
   .icon{
     font-size: 14px;
   }
@@ -40,16 +49,29 @@ $green-darken 		  : #16a085;
       text-align: center;
       margin-right: 23px;
     }
-    &.completed {
+    &.current {
       a {
-        background-color: $blue-darken;
+        background-color: $current-bg-color;
         color: whitesmoke;
         &:before{
-          border-color:$blue-darken;
+          border-color:$current-bg-color;
           border-left-color:transparent;
          }
         &:after{
-          border-left-color:$blue-darken;
+          border-left-color:$current-bg-color;
+        }
+      }
+    }
+    &.completed {
+      a {
+        background-color: $completed-bg-color;
+        color: $completed-text-color;
+        &:before{
+          border-color:$completed-bg-color;
+          border-left-color:transparent;
+         }
+        &:after{
+          border-left-color:$completed-bg-color;
         }
       }
     }
@@ -106,14 +128,14 @@ $green-darken 		  : #16a085;
         border-left-color:$normal-bg-color;
       }
       &:hover{
-        background-color: $blue;
+        background-color: $hover-bg-color;
         color: whitesmoke;
         &:before{
-          border-color:$blue;
+          border-color: $hover-bg-color;
           border-left-color:transparent;
          }
         &:after{
-          border-left-color:$blue;
+          border-left-color: $hover-bg-color;
         }
       }
       &:active{
