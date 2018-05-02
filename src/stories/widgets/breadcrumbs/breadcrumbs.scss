@@ -17,6 +17,7 @@ $green-darken 		  : #16a085;
       -ms-border-radius: $radius;
           border-radius: $radius;
 }
+
 .breadcrumbs {
   ul {
     text-align: center;
@@ -66,6 +67,7 @@ $green-darken 		  : #16a085;
     }
     &.completed {
       a {
+        text-decoration:underline;
         background-color: $completed-bg-color;
         color: $completed-text-color;
         &:before{
