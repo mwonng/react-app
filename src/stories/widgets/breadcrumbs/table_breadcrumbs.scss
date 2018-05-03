@@ -1,0 +1,132 @@
+$current-bg-color: #49bcea;
+$current-text-color: #fff;
+$border-color: #dbdbdb;
+$hover-bg-color: #1abc9c;
+$normal-bg-color: #f3f3f3;
+$normal-text-color: #969696;
+$completed-bg-color: #fff;
+$completed-text-color: #585858;
+$width: 40px;
+
+#table-breadcrumb {
+  table-layout: fixed;
+  width:100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+
+  td {
+    font-family: "proxima-nova";
+    background: $normal-bg-color;
+    text-align: center;
+    position: relative;
+    padding-left: 1rem;
+    height: $width;
+    span {
+      display: inline-block;
+      text-align: left;
+      width: 80%;
+      margin: 0 auto;
+      a, a:visited, {
+        color: $completed-text-color;
+        font-weight: 600;
+      }
+    }
+
+    &:hover span a{
+      color: $current-text-color;
+    }
+
+    &.completed {
+      background-color: $completed-bg-color;
+      &:before {
+        background-color: $completed-bg-color;
+        border: {
+          top: 1px solid $border-color;
+          right: 1px solid $border-color;
+        }
+      }
+    }
+
+    &.selected, &:hover {
+      background-color: $current-bg-color;
+      color: $current-text-color;
+      &:before {
+        background-color: $current-bg-color;
+        border: {
+          top: 1px solid $border-color;
+          right: 1px solid $border-color;
+        }
+      }
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    // &:before,
+    &:before{
+      content: "";
+      position:absolute;
+      z-index: 1;
+      display: inline-block;
+      top: 5.2px;
+      right: -14px;
+      // border-width:20px 10px;
+      width: 27.5px;
+      height: 27.5px;
+      background-color: $normal-bg-color;
+      border: {
+        top: 1px solid $border-color;
+        right: 1px solid $border-color;
+      }
+      transform: rotate(45deg);
+    }
+
+    &:last-of-type {
+      &:before{
+        content: normal;
+      }
+    }
+  }
+}
+
+@media screen and (max-width:320px) {
+  #table-breadcrumb{
+    table-layout: unset;
+    td {
+      padding: 5px 0;
+      border: {
+        top: 1px solid $border-color;
+        left: 1px solid $current-text-color;
+        bottom: 1px solid $border-color;
+        right: 1px solid $current-text-color;
+      }
+      & > span {
+        text-align: left;
+      }
+
+      &:first-of-type {
+        border: {
+          left: 1px solid $border-color;
+        }
+      };
+      &:last-of-type {
+        border: {
+          right: 1px solid $border-color;
+        }
+      };
+      &:before {
+        display: none;
+      }
+    }
+  }
+}
+
+@media screen and (min-width:321px) {
+  #table-breadcrumb{
+    td {
+      padding: 0 10px;
+      border: 1px solid $border-color;
+    }
+  }
+}

@@ -26,20 +26,17 @@ $green-darken 		  : #16a085;
     width: 100%;
   }
 }
+
 #breadcrumb{
   list-style:none;
   display: inline-block;
   background-color: gray;
 
-
-  .icon{
-    font-size: 14px;
-  }
-  
   li{
     // float:left;
     display: inline-block;
     a{
+      font-size: 16px;
       font-family: "proxima-nova";
       color: $normal-text-color;
       display:block;
@@ -51,6 +48,7 @@ $green-darken 		  : #16a085;
       padding: 0 8px 0 4px;
       text-align: center;
       margin-right: 23px;
+      max-width: 80px;
     }
     &.current {
       a {
@@ -153,6 +151,22 @@ $green-darken 		  : #16a085;
         &:after{
           border-left-color:$green-darken;
         }
+      }
+    }
+  }
+}
+
+@media screen and (max-width:320px) {
+  #breadcrumb{
+    li{
+      a{
+        font-size: 10px;
+        text-decoration: none;
+        position:relative;
+        height: 40px;
+        line-height:15px;
+        padding: 0 8px 0 4px;
+        max-width: 80px;
       }
     }
   }
