@@ -10,6 +10,7 @@ $width: 2.5rem;
 
 #table-breadcrumb {
   table-layout: fixed;
+  min-width: 320px;
   width:100%;
   border-collapse: collapse;
   border-spacing: 0;
@@ -100,8 +101,6 @@ $width: 2.5rem;
       cursor: pointer;
     }
 
-
-
     &:last-of-type {
       &:before{
         content: normal;
@@ -133,6 +132,9 @@ $width: 2.5rem;
       &:last-of-type {
         border: {
           right: 1px solid $border-color;
+        }
+        a:before {
+          display: none;
         }
       };
       &:before {

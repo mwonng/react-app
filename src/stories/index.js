@@ -10,7 +10,9 @@ import { Header } from './sections/header'
 import Carousel from './Carousel/Carousel'
 import Ribbon from './widgets/ribbon/ribbon'
 import Breadcrumbs from './widgets/breadcrumbs/breadcrumbs'
+import DemoWrapper from './widgets/wrapper/wrapper'
 import './fonts.scss'
+import './index.scss'
 
 storiesOf('Welcome', module).add('to Storybook', () => <Welcome showApp={linkTo('Button')} />);
 
@@ -23,4 +25,4 @@ storiesOf('Button', module)
 
 storiesOf('Widgets', module)
   .add('Red Button', () => <Ribbon>This is Ribbon</Ribbon>)
-  .add('Breadcrumbs', () =><Breadcrumbs />)
+  .add('Breadcrumbs', () => <DemoWrapper><Breadcrumbs /></DemoWrapper>)

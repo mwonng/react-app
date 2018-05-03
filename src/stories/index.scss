@@ -1,0 +1,15 @@
+body {
+  margin: 0;
+}
+
+@media screen and (max-width:320px) {
+  #demoWrapperStyle {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width:321px) {
+  #demoWrapperStyle {
+    width: 80%;
+  }
+}
