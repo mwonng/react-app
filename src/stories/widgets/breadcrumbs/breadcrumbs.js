@@ -30,23 +30,41 @@ const Breadcrumb = () => {
     )
 }
 
-const TableBreadcrumb = () => {
+const TableBreadcrumb = (props) => {
+  let preItems = [{
+      text: "Choose plan",
+      className: "completed",
+      url: "#1"
+    },
+    {
+      text: "Choose addons",
+      className: "selected",
+      url: "#2"
+    },
+    {
+      text: "Config payment",
+      className: "",
+      url: "#3"
+    },
+    {
+      text: "Apply online",
+      className: "",
+      url: "#4"
+    }
+  ]
+  const items = props.items || preItems.map((i,index) =>
+    <td className={i.className} key={index} >
+      <span>{i.text}</span>
+      {i.url? <a href={i.url}></a> : ""}
+    </td>
+  )
   return(
     <table id="table-breadcrumb">
-      <tr>
-        <td className="completed">
-          <span><a href="#">Change role</a></span>
-        </td>
-        <td className="selected">
-          <span>Switch Banner</span>
-        </td>
-        <td>
-          <span>Dig hole</span>
-        </td>
-        <td>
-          <span>Whispering story</span>
-        </td>
-      </tr>
+      <tbody>
+        <tr>
+          {items}
+        </tr>
+      </tbody>
     </table>
   )
 }

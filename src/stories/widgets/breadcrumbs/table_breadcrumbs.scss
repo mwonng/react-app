@@ -6,7 +6,7 @@ $normal-bg-color: #f3f3f3;
 $normal-text-color: #969696;
 $completed-bg-color: #fff;
 $completed-text-color: #585858;
-$width: 40px;
+$width: 2.5rem;
 
 #table-breadcrumb {
   table-layout: fixed;
@@ -14,7 +14,7 @@ $width: 40px;
   border-collapse: collapse;
   border-spacing: 0;
 
-  td {
+   td {
     font-family: "proxima-nova";
     background: $normal-bg-color;
     text-align: center;
@@ -22,8 +22,9 @@ $width: 40px;
     padding-left: 1rem;
     height: $width;
     span {
+      position: relative;
+      z-index: 2;
       display: inline-block;
-      text-align: left;
       width: 80%;
       margin: 0 auto;
       a, a:visited, {
@@ -32,6 +33,42 @@ $width: 40px;
       }
     }
 
+    // &:before
+    &:before, & > a:before{
+      content: "";
+      position: absolute;
+      z-index: 1;
+      display: inline-block;
+      top: $width*0.13;
+      right: -$width*0.35;
+      width: $width*0.6875;
+      height: $width*0.6875;
+      transform: rotate(45deg);
+    }
+
+    &:before {
+      background-color: $normal-bg-color;
+      border: {
+        top: 1px solid $border-color;
+        right: 1px solid $border-color;
+      }
+    }
+
+    & > a {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 10;
+      &:before {
+        background-color: transparent;
+        border: {
+          top: 0px solid transparent;
+          right: 0px solid transparent;
+        }
+      }
+    }
     &:hover span a{
       color: $current-text-color;
     }
@@ -63,24 +100,7 @@ $width: 40px;
       cursor: pointer;
     }
 
-    // &:before,
-    &:before{
-      content: "";
-      position:absolute;
-      z-index: 1;
-      display: inline-block;
-      top: 5.2px;
-      right: -14px;
-      // border-width:20px 10px;
-      width: 27.5px;
-      height: 27.5px;
-      background-color: $normal-bg-color;
-      border: {
-        top: 1px solid $border-color;
-        right: 1px solid $border-color;
-      }
-      transform: rotate(45deg);
-    }
+
 
     &:last-of-type {
       &:before{
@@ -125,8 +145,11 @@ $width: 40px;
 @media screen and (min-width:321px) {
   #table-breadcrumb{
     td {
-      padding: 0 10px;
+      padding: 0 $width*0.25;
       border: 1px solid $border-color;
+      span {
+        text-align: center;
+      }
     }
   }
 }

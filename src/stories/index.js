@@ -23,4 +23,4 @@ storiesOf('Button', module)
 
 storiesOf('Widgets', module)
   .add('Red Button', () => <Ribbon>This is Ribbon</Ribbon>)
-  .add('Breadcrumbs', () => <Breadcrumbs />)
+  .add('Breadcrumbs', () =><Breadcrumbs />)
